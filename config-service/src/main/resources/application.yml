@@ -1,0 +1,20 @@
+server:
+  port: 8888 # config service application port
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+
+polar:
+  greeting: "Welcome to the catalog from the config server"
